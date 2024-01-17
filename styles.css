@@ -1,0 +1,143 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/font/work-sans-v19-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('assets/font/work-sans-v19-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/font/work-sans-v19-latin-700.woff2') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Work Sans';
+}
+
+.top-image {
+  background-image: url('img/background-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background: hsl(278.8, 100%, 97%);
+}
+
+.container {
+  position: absolute;
+  top: 75px;
+  width: 550px;
+  padding: 20px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.container .heading {
+  display: flex;
+  gap: 15px;
+  padding-left: 15px;
+  padding-top: 30px;
+}
+
+.container .heading img {
+  width: 30px;
+}
+
+.container .heading h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.accordion-item {
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+  padding: 10px 0;
+}
+
+.accordion-item:nth-child(4) {
+  border: none;
+  margin: 0;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  transition: 0.3s;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.accordion-title:hover {
+  color: hsl(282.4, 46%, 49%);
+}
+
+.accordion-content {
+  color: hsl(292, 16%, 49%);
+  font-weight: 400;
+  padding: 0 20px;
+  font-size: 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.active {
+  max-height: 100px;
+}
+
+.fa-circle-plus {
+  font-size: 20px;
+  color: hsl(292, 16%, 49%);
+}
+.fa-circle-minus {
+  font-size: 20px;
+  color: hsl(292, 42%, 14%);
+}
+
+/* Media Queries */
+@media (max-width: 375px) {
+  .container {
+    width: 350px;
+  }
+  .container .heading img {
+    width: 20px;
+  }
+
+  .container .heading h1 {
+    font-size: 2.1rem;
+  }
+  .fa-circle-plus {
+    font-size: 15px;
+  }
+  .fa-circle-minus {
+    font-size: 15px;
+  }
+  .accordion-title {
+    font-size: 14px;
+  }
+}
